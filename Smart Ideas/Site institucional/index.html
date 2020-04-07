@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta lang="pt-br">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css-1/style.css" rel="stylesheet">
+    <title>Site institucional</title>
+</head>
+
+<body background="img/cinza.jpg">
+    <!-- Logo e nome da empresa/projeto -->
+    <nav class="navbar navbar-light" style="background-color: lightslategrey">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            StopCar
+        </a>
+        <ul class="nav">
+            <li class="nav-item">
+                <label for="rd_home">Home</label>
+            </li>
+            <li class="nav-item">
+                <label for="rd_nos">Quem somos</label>
+            </li>
+            <li class="nav-item">
+                <label for="rd_servicos">Financeiro</label>
+            </li>
+            <li class="nav-item">
+                <label for="rd_contato">Contato</label>
+            </li>
+            <li class="nav-item">
+                <label for="rd_logar">Logar</label>
+            </li>
+        </ul>
+    </nav>
+    <div class="scroll">
+        <input type="radio" name="grupo" id="rd_logar" onclick="window.location='./telalogin.html';">
+        <input type="radio" name="grupo" id="rd_home" checked="true">
+        <input type="radio" name="grupo" id="rd_nos">
+        <input type="radio" name="grupo" id="rd_servicos">
+        <input type="radio" name="grupo" id="rd_contato">
+
+        <section class="sections">
+            <section class="bloco" id="home">
+
+                <div id="div_imgs">
+					<img src="img/logo.png" alt="Logo">
+					<img src="img/estacionamento.png" alt="Projeto">
+				</div>
+
+            </section>
+
+            <section class="bloco" id="nos">
+                <div id="div_quem_somos" style="width: 600px; height: 525px; border: 1px solid black;
+				text-align: center; background-color: #CCC; border-radius: 20px;">
+
+				    <div style="margin-left: 10px; margin-right: 10px;">
+					<H1 style="text-align: center ; padding: 10px 0; margin-bottom: 2px solid black">Quem somos</H1>
+					<hr style="background-color: black; margin-bottom: 10px; margin-left: 10px; margin-right: 10px;">
+
+					<h4 style="padding-top: 50px;">
+						Stopcar é uma plataforma web criada em 2020, os criadores são um grupo de estudantes
+						do ensino superior
+						de análise e desenvolvimento de sistemas da faculdade BandTec.</h4>
+					<br>
+					
+					<h4>A plataforma utiliza um banco de dados que faz
+						registros feitos
+						pelos sensores instalados no estacionamento.</h4>
+					<br>
+					<h4>E com esses dados a aplicacao faz análises de mercado e exibe informações
+						técnicas e graficos para ajudar o usuario a tomar melhores decicoes</h4>
+					</div>
+				</div>
+            </section>
+
+            <section class="bloco" id="servicos">
+                <div style="text-align: center; align-items: center;
+                            width: 500px; height: 600px; border-radius: 20px; border: 1px solid lightgray; background: #ccc;">
+                    <h3 align = "center" style="margin-top: 5%;">Insira o valor da hora em seu estacionamento</h3>
+                    <input type="number" id="valorHora" style="margin-left: 4.5%;">
+                    <hr>
+                    <h3 style="align: center; margin-top: 5%;">Insira o seu horário de pico</h3>
+                    <input type="number" id="valorPico" style="margin-left: 4.5%;">
+                    <hr>
+                    <h3 style="align: center; margin-top: 5%;">Insira o seu horário de menos movimento</h3>
+                    <input type="number" id="valorHoraMenos" style="margin-left: 4.5%;">
+                    <br>
+                    <button onclick="horariodepico()" style="width: 150px; height: 40px;">Calcular</button><br><br>
+                    <div id="result" aling="center">Aqui aparecerá a porcentagem do valor a ser adicionado ou
+                        descontado do preço da vaga dependendo da hora do dia</div>
+                </div>
+            </section>
+
+            <section class="bloco" id="contato">
+                <div style="text-align: center; background: #CCC; border-radius: 20px;width: 500px; height: 500px;">
+                    <h1 style="color: #333; text-align: center; padding: 5px;">Atendimento</h1>
+                    <hr> 
+                    <br>
+                    <h4>Horário de atendimento: 13:00 às 19:00 de segunda à sexta-feira, horário de Brasília (exceto
+                        feriados).</h4>
+                    <br>
+                    <h4>Endereço: Rua Haddock Lobo, 2 - 4º Andar</h4>
+                    <br>
+                    <h4>Centro - Consolação (SP) - CEP: 12345-678</h4>
+                    <br>
+                    <h4>Central SAC: (11) 4002-8922</h4>
+                    <br>
+                    <h4>E-mail: stopcar@hotmail.com.br</h4>
+                </div>
+                <div style="border-radius: 20px ; background: #CCC; width: 450px; height: 500px; margin-left: 2%;">
+
+                    <form name="formteste" action="" method="post">
+
+                        <h1 style="color: #333; text-align: center; padding: 5px;">Contato</h1>
+                        <hr>
+                        <p class="nome">
+                            <input type="text" name="nome" placeholder="informe seu nome" style="display: block;">
+                        </p>
+
+                        <p class="email">
+                            <input type="email" name="email" placeholder="informe seu email" style="display: block;">
+                        </p>
+
+                        <p class="assunto">
+                            <input type="text" name="assunto" placeholder="informe o assunto" style="display: block;">
+                        </p>
+
+                        <p class="mensagem">
+                            <textarea name="mensagem" placeholder="deixe sua mensagem"></textarea>
+                        </p>
+
+                        <p class="enviar">
+                            <input type="submit" name="enviar" value="Enviar" style="display: block;">
+                        </p>
+
+                    </form>
+                </div>
+            </section>
+        </section>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function horariodepico(){
+        var data = new Date();
+        var hora = data.getHours();
+        var valorMais = Number(valorHora.value) * 1.20;
+        var valorMenos = Number(valorHora.value) * 0.85;
+
+        if (hora == Number(valorPico.value)) {
+            result.innerHTML = `O valor do estacionamento deve subir em 20% para R$${valorMais.toFixed(2)}`;
+        }
+        else if(hora == Number(valorHoraMenos.value)){
+            result.innerHTML = `O valor do estacionamento deve ter um desconto em 15% para R$${valorMenos.toFixed(2)}`;
+        }
+        else{
+            result.innerHTML = `O valor do estacionamento em seu horário de pico é R$${valorPico.toFixed(2)}, e em seu horário de menos movimento é R$${valorMenos.toFixed(2)}`;
+        }
+    }
+</script>

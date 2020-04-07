@@ -1,0 +1,104 @@
+
+.nav label{
+    cursor: pointer;
+    transition: all .4s;
+    font-family: 'Arial';
+    font-size: 100%;
+    color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10px;
+}
+
+.nav label:hover{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.scroll input{
+    display: none;
+}
+
+.bloco{
+    width: 100vw;
+    height: 93vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.bloco input{
+    display: block;
+}
+
+#home{
+
+    background-color: gray;
+}
+
+#nos{
+    background-color: steelblue;
+}
+
+#servicos{
+    background-color: cadetblue;
+}
+
+#contato{
+    background-color: darkcyan;
+}
+
+.scroll{
+	display: flex;
+	width: 100vw;
+	height: 93vh;
+	overflow: hidden;
+}
+.sections{
+    transition: all .4s;
+}
+
+#rd_nos:checked ~ .sections{
+	margin-top: -93vh;
+}
+
+#rd_servicos:checked ~ .sections{
+	margin-top: -186vh;
+}
+
+#rd_contato:checked ~ .sections{
+	margin-top: -279vh;
+}
+
+input, textarea{
+    border-radius: 10px;
+    width: 450px;
+    padding: 10px;
+    }
+    
+    .enviar input {
+    background-color: mediumseagreen;
+    height: 50px;
+    width: 150px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid;
+    color: #FFF;
+    cursor: pointer;
+    }
+    
+    .enviar input:hover{
+    background: lightseagreen;
+    
+    }
+    
+    textarea {
+    border-radius: 10px;
+    width: 450px;
+    height: 120px;
+    line-height: 20px;
+}
+.bloco img{
+    border-radius: 15px;
+    width: 600px;
+    height: 600px;
+}
